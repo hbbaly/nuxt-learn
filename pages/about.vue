@@ -8,6 +8,14 @@ export default {
   transition: {
     name: 'slide-right',
     mode: 'out-in'
+  },
+  head() {
+    return {
+      title: '这里是关于页面',
+      meta: [
+        { hid: 'description', name: 'description', content: '这里是关于页面' }
+      ]
+    }
   }
 }
 </script>
