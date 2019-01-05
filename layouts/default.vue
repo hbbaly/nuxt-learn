@@ -1,4 +1,5 @@
 <template>
+  <!-- 这里的默认页面相当于 vue项目中的APP.vue页面，<nuxt /> 必不可少 -->
   <div>
     <nuxt/>
   </div>

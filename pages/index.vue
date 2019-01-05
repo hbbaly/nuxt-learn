@@ -10,7 +10,7 @@
       class="__link" 
       to="/hbb">Name</nuxt-link>
     <nuxt-link 
-      class="__link" 
+      class="__link"
       to="/user">/user</nuxt-link>
     <nuxt-link 
       class="__link" 
@@ -20,6 +20,7 @@
 
 <script>
 export default {
+  layout: 'blog',
   components: {}
 }
 </script>
