@@ -82,10 +82,10 @@ module.exports = {
     },
     postcss: {
       plugins: {
-          // Disable `postcss-url`
+        // Disable `postcss-url`
         // 'postcss-url': false,
         // Add some plugins
-        'postcss-px2rem':{
+        'postcss-px2rem': {
           remUnit: 75
         }
       }
