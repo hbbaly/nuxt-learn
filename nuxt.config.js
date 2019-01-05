@@ -29,7 +29,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [{ src: '~/plugins/setRem.js', ssr: false }],
 
   /*
   ** Nuxt.js modules
@@ -50,6 +50,23 @@ module.exports = {
   */
   build: {
     /*
+    ** 覆盖webpack得配置，对图片小于10000得打包成base64
+    */
+    loaders: [
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: 'img/[name].[hash].[ext]'
+        }
+      },
+      {
+        test: /\.less$/,
+        loader: 'style-loader!css-loader!less-loader'
+      }
+    ],
+    /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
@@ -61,6 +78,16 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+    },
+    postcss: {
+      plugins: {
+          // Disable `postcss-url`
+        // 'postcss-url': false,
+        // Add some plugins
+        'postcss-px2rem':{
+          remUnit: 75
+        }
       }
     }
   }

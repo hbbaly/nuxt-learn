@@ -1,11 +1,15 @@
 <template>
-  <section class="container">
-    <div>
-      <nuxt-link to="/">Index</nuxt-link>
-      <nuxt-link to="/about">About</nuxt-link>
-      <nuxt-link to="/center">Center</nuxt-link>
-    </div>
-  </section>
+  <div class="page page-index">
+    <nuxt-link 
+      class="__link" 
+      to="/">Index</nuxt-link>
+    <nuxt-link 
+      class="__link" 
+      to="/about">About</nuxt-link>
+    <nuxt-link 
+      class="__link" 
+      to="/center">Center</nuxt-link>
+  </div>
 </template>
 
 <script>
@@ -14,5 +18,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
+.page-index {
+  .__link {
+    display: block;
+    margin-top: 20px;
+    font-size: 40px;
+  }
+}
 </style>
