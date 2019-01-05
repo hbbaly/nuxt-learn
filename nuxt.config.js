@@ -29,7 +29,10 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '~/plugins/setRem.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/setRem.js', ssr: false },
+    { src: '~/plugins/allFilters.js', ssr: true }
+  ],
 
   /*
   ** Nuxt.js modules

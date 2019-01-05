@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>这里是about页面</h1>
+    <p>{{ 'my name is ' | dealName }}</p>
   </div>
 </template>
 <script>
