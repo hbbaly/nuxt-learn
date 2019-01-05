@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "fix": "eslint --ext .vue,.js . --fix"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
@@ -26,5 +27,11 @@
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "2.6.2",
     "prettier": "1.14.3"
+  },
+  "config":{
+    "nuxt":{
+      "host":"localhost",
+      "port":"3000"
+    }
   }
 }
